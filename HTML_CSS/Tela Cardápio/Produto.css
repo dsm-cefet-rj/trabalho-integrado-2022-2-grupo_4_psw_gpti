@@ -1,0 +1,62 @@
+body{
+background-color: #B7001F;
+}
+
+input.one{
+margin-left: 85px;
+}
+
+label.one{
+margin-right: 15px;
+}
+
+label{
+font-family: "Times new roman", times;
+color: white;
+font-size: 22px;
+text-shadow: 2px 2px black;
+}
+
+input.one{
+background: #FEDE00;
+font-size: 27px;
+font-family: "Times new roman", times;
+color: #B7001F;
+border: 0px;
+border-radius: 5px;
+}
+
+h3.one{
+font-family: "Times new roman", times;
+color: white;
+font-size: 27px;
+}
+
+div.one{
+position: relative;
+width: fit-content;
+width: -moz-fit-content;
+}
+div.two{
+position: relative;
+width: fit-content;
+width: -moz-fit-content;
+}
+
+div.three {
+width: fit-content; 
+padding: 8px;
+}
+
+div.four {
+width: fit-content; 
+}
+
+
+
+
+
+
+
+
+
