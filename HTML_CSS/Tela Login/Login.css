@@ -1,18 +1,13 @@
-body{
-background-color: #B7001F;
-}
- 
 div.one {
 border: 4px solid #fede00;
 border-radius: 10px;
 background: #fede00;
-width: min-content; 
-margin-top:50px;
-padding: 4px;
+text-align: center;
 }
 
-div.two {
-width: min-content; 
+
+body{
+background: #b7001f !important;
 }
 
 label.one{
@@ -28,6 +23,7 @@ font-family: Times new roman, times;
 color: #FEDE00;
 border: 0px;
 border-radius: 5px;
+
 }
 
 input.two{
@@ -47,14 +43,19 @@ border-radius: 5px;
 margin-top:70px;
 }
 
-#img2.one{
-margin-left: 50px;
-margin-top: 50px;
-
+div.four {
+text-align: right;
 }
 
-p.one{
-font-family: Times new roman, times;
-color: white;
-font-size: 22px;
+
+div.five {
+text-align: right;
+}
+
+form.one{
+text-align: right;
+}
+
+form.two{
+text-align: left;
 }
