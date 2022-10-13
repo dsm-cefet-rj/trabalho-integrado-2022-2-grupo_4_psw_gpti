@@ -52,6 +52,64 @@ div.four {
 width: fit-content; 
 }
 
+@media screen and (max-width: 768px) {
+
+    div.zero {
+        width: 270px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    div.one {
+        width: 275px;
+        height: 475px;
+    }
+
+    div.two {
+        width: 270px;
+        height: 330px;
+        margin-left: 0px;
+    }
+
+    div.three {
+        width: 270px;
+        height: 25px;
+        border-radius: 8px;
+        margin-top: 288px;
+        background: none;
+        border: none;
+    }
+
+    h2.one {
+        position: relative;
+        margin-left: 100px;
+        margin-top: -60px;
+        font-size: 21px;
+        text-align: center;   
+    }
+
+    input.one {
+        margin-left: 3px;
+        border: 2px solid #b7001c;
+        background-color: #ffff90;
+        font-size: 20px;
+        border-radius: 8px;
+        width: 250px;
+    }
+
+    input.two {
+        width: 42px;
+        height: 25px;
+        font-size: 15px;
+        position: relative;
+        border: 0px;
+        margin-top: 10px;
+        margin-right: -70px;
+        color: #ffff90;;
+    }
+
+
+}
 
 
 
