@@ -1,0 +1,279 @@
+body{
+    background-color: #B7001F;
+    }
+ /* nav */
+    ul {
+    margin: 0px;
+    padding: 0px;
+    } 
+
+    a {
+        color:#fede00;
+        text-decoration: none;
+        font-family: 'Corbert';
+    }
+
+    #header {
+        display: flex;
+        align-items: center;
+        height: 70px;
+        box-sizing: border-box;
+        padding: 1rem;
+        justify-content: space-between;
+    }
+
+    #logo {
+        height: 100px;
+    }
+
+    #menu {
+        display: flex;
+        list-style: none;
+        gap: .5rem;
+    }
+    
+    #menuMobile {
+        display: none;
+    }
+
+    /*fonte + chat */
+    
+    @font-face {
+        font-family: 'Corbert';
+        src: url('Corbert-Regular.ttf');
+    }
+    
+    img.one{
+    border: 1px solid #fede00;
+    background: #fede00;
+    border-radius:40px;
+    padding: 10px;
+    }
+    
+    .circulo {
+        width: min-content;
+        height: min-content;
+        border-radius: 50%;
+        overflow: hidden;
+        transition: 0.3s ease;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        background: #fede00;
+        display: flex;
+    }
+
+    div.zero {
+        width: 400px;
+        text-align: center;
+        margin: 0 auto;
+        margin-left: 230px;
+    }
+    
+    div.one{
+    border: 1px solid #ffff55;
+    border-radius: 10px;
+    background: #ffff55;
+    width: 550px;
+    height: 635px;
+    text-align: center;
+    margin-left: 150px;
+    margin-top: 20px;
+    }
+    
+    div.two{
+    border: 2px solid #b7001c;
+    border-radius: 10px;
+    background: #ffff90;
+    width: 525px;
+    height: 515px;
+    margin-top: 7px;
+    margin-left: 10px;
+    }
+    
+    div.three{
+    border: 2px solid #b7001c;
+    border-radius: 6px;
+    background: none;
+    width: 522px;
+    height: 50px;
+    margin-top: 462px;
+    text-align: center;
+    }
+    
+    h2.one{
+    position: relative;
+    margin-left: 100px;
+    margin-top: -10%;
+    font-family: 'Corbert', Times;
+    font-size:27px;
+    color: #b7001f;
+    }
+    
+    input.one{
+    background: none;
+    font-family: 'Corbert', Times;
+    font-size:22px;
+    border:0px;
+    border-radius:5px;
+    margin-top: 5px;
+    color:#b7001f;
+    margin-left: 5px;
+    }
+    
+    input.two{
+    width:70px;
+    height:35px;
+    background:#b7001f;
+    font-family: "Times new roman", Times;
+    font-size:22px;
+    border:0px;
+    border-radius:5px;
+    color:#fede00;
+    margin-right: 5px;
+    margin-left: 150px;
+    margin-top: 6px;
+    text-align: right;
+    }
+
+@media screen and (max-width: 768px) {
+
+     /* nav */
+    #logo {
+        height: 65px;
+    }
+
+    #menuMobile {
+        display: block;
+    }
+
+    a {
+        color: #b7001c;        
+    }
+
+    #menu {
+        display: block;
+        position:relative;
+        top: 70px;
+        right: 0px;
+        height: 0px;
+        border-radius: 10px;
+        transition: .6s;
+        background-color: #ffff90;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+
+    #menu a{
+        padding: 1rem 0;
+        margin: 0 1rem;
+        font-size: 12px;
+    }
+
+    #nav.active #menu {
+        display: block;
+        height: 80%;
+        visibility: visible;
+        overflow-y: auto;
+    }
+
+    #menuMobile {
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        gap: .5rem;
+        color: #fede00;
+    }
+
+    #botaoMenu {
+        width: 20px;
+        border-top: 2px solid;
+    }
+
+    #botaoMenu::after, #botaoMenu::before {
+        content:'';
+        display: block;
+        width: 20px;
+        height: 2px;
+        margin-top: 5px;
+        border-top: 2px solid;
+        transition: .5s;
+        position: relative;
+    }
+
+    #nav.active #botaoMenu {
+        border-top-color: transparent;
+
+    }
+
+    #nav.active #botaoMenu::before {
+        transform: rotate(135deg);
+        top: 0px;
+    }
+
+    #nav.active #botaoMenu::after {
+        transform: rotate(-135deg);
+        top: -8px;
+    }
+
+    /*chat*/
+
+    div.zero {
+        width: 280px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    div.one {
+        width: 280px;
+        height: 485px;
+        margin-left: 35px;
+    }
+
+    div.two {
+        width: 270px;
+        height: 330px;
+        margin-left: 0px;
+    }
+
+    div.three {
+        width: 270px;
+        height: 25px;
+        border-radius: 8px;
+        margin-top: 288px;
+        background: none;
+        border: none;
+    }
+
+    h2.one {
+        position: relative;
+        margin-left: 100px;
+        margin-top: -60px;
+        font-size: 21px;
+        text-align: center;   
+    }
+
+    input.one {
+        margin-left: 3px;
+        border: 2px solid #b7001c;
+        background-color: #ffff90;
+        font-size: 20px;
+        border-radius: 8px;
+        width: 250px;
+    }
+
+    input.two {
+        width: 42px;
+        height: 25px;
+        font-size: 15px;
+        position: relative;
+        border: 0px;
+        margin-top: 5px;
+        margin-right: -70px;
+        color: #ffff90;;
+    }
+
+
+}
