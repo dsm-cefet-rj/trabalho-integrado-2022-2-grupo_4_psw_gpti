@@ -8,7 +8,6 @@ import Pedido_Final from "./Pages/Pedido_Final";
 import Cardapio from "./Pages/Cardapio";
 import Pagamento_Final from "./Pages/Pagamento_Final";
 import Chat from "./Pages/Chat";
-const db = require("./db");
 
 export default () =>{
 
