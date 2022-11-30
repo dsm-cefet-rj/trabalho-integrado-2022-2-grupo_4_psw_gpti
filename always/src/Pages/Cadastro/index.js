@@ -3,77 +3,75 @@ import {AreaCadastro} from './Styled';
 import {Link} from 'react-router-dom';
 import {Button} from 'reactstrap';
 import Helmet from 'react-helmet';
-import axios from 'redaxios';
+import  * as yup from 'yup';
+import {yupResolver} from '@hookform/resolvers/yup';
+import {useForm} from 'react-hook-form';
+
+const validPost = yup.object().shape(
+    {
+        nome: yup.string().required().max(30),
+        cpf: yup.number().required(11),
+        telefone: yup.number().required().max(11),
+        endereco: yup.string().required().max(40),
+        senha: yup.string().required().max(10),
+        email: yup.string().required().max(50),
 
 
-const http = axios.create({
-	baseURL: 'http://api.Grupo4ALways.com.br',
-
-})
+    }
+)
 
 function Page(){
-	const[tasks, updateTasks] = useState([])
-	const [task, updateTask] = useState('')
 
-useEffect(() => {
-	http.get('/api/tasks')
-	.then(Response=>{
-		updateTask(Response.data.tasks)
+	const addPost = data => console.log(data)
+	
+	const {register, handleSubmit, formState: {errors}} = useForm({
+		resolver: yupResolver(validPost)
 	})
-},[])
 
-const handleAddTask = event => {
-	event.preventDefault()
-	if(task.trim()) {
-		http.post('/api/tasks', {task})
-		.then(Response=>{
-			updateTask('')
-			updateTasks(oldTasks => [...oldTasks, Response.data.task])
-		})
-	}
-}
+	
 
-
-    return(
+	   return(
         <AreaCadastro>
         <Helmet>
             <title>Cadastre-se</title>
         </Helmet> 
+		<main>
             <div className="container">
 		        <div className="row">
 			        <div className="col nine">
 			        	<div>
-				            <form className="two" onSubmit={handleAddTask}>
-					            <label className=" onelog" for="nome">
-					                Nome:
- 					                <input className = "two" type="text" name="nome" />
- 					            </label>
-                                <label className=" onelog" for="cpf">
-					                CPF:
- 					                <input className = "two" type="text" name="cpf" />
- 					            </label>
-                                <label className=" onelog" for="tel">
-					                Telefone:
- 					                <input className = "two" type="text" name="tel" />
- 					            </label>
-                                 <label className=" onelog" for="email">
-					                E-mail:
- 					                <input className = "two" type="text" name="email" />
- 					            </label>
-                                 <label className=" onelog" for="end">
-					                Endereço:
- 					                <input className = "two" type="text" name="end" />
- 					            </label>
-					            <label className=" onelog" for="senha">
-					                Senha:
- 					                <input className = "two" type="text" name="senha" />
- 					            </label>
-                                 <label className=" onelog" for="con-senha">
-					                Confirmar Senha:
- 					                <input className = "two" type="text" onChange={event => updateTask(event.target.value)} value={task} name="con-senha" />
- 					            </label>
-								 <button>Enviar</button>
-								{tasks.map(t => <a className='hid' key={t.id}> {t.name}</a>)}
+				            <form className="two" onSubmit={handleSubmit(addPost)}>
+					            <label className=" onelog">
+					                Nome:</label>
+ 					                <input className = "two" type="text" name="nome" {...register('nome')} />
+									 <p>{errors.nome?.message}</p>
+								
+                                <label className=" onelog">
+					                CPF:</label>
+ 					                <input className = "two" type="text" name="cpf" {...register('cpf')} />
+									 <p>{errors.cpf?.message}</p>
+								
+                                <label className=" onelog">
+					                Telefone:</label>
+ 					                <input className = "two" type="text" name="tel" {...register('tel')}/>
+									 <p>{errors.tel?.message}</p>
+								
+                                 <label className=" onelog" >
+					                E-mail:</label>
+ 					                <input className = "two" type="text" name="email" {...register('email')}/>
+									 <p>{errors.email?.message}</p>
+								
+                                 <label className=" onelog" >
+					                Endereço:</label>
+ 					                <input className = "two" type="text" name="end" {...register('end')}/>
+									 <p>{errors.end?.message}</p>
+							    
+					            <label className=" onelog">
+					                Senha:</label>
+ 					                <input className = "two" type="text" name="senha" {...register('senha')}/>
+									<p>{errors.senha?.message}</p>
+ 					            
+								 <Button type="submit">Enviar</Button>
 					        </form>
 				        </div>
 			        </div>
@@ -85,11 +83,13 @@ const handleAddTask = event => {
 
 				</div>
             </div>
+			</main>
 
         </AreaCadastro>
     );
 
-}
+	   
+	   }
 
 export default Page;
 

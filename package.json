@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@hookform/resolvers": "^2.9.10",
+    "react-hook-form": "^7.39.5",
+    "yup": "^0.32.11",
+    "yup-locale-pt": "^0.0.9"
+  }
+}
