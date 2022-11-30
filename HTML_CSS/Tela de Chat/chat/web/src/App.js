@@ -6,9 +6,12 @@ import { Nav } from './html/chat';
 //nav do html//
 import './html/mobileChat';
 
+
 function App() {
+  render()
   return (
-    <div>
+   
+   <div> 
       <Nav/>
       <Chat/>
     </div>

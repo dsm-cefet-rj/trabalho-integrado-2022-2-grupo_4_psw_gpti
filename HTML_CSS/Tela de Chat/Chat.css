@@ -14,12 +14,14 @@ body{
         height: min-content;
         border-radius: 50%;
         overflow: hidden;
-        transition: 0.3s ease;
+        transition: 0.3s ease; 
         padding-top: 15px;
         padding-bottom: 15px;
         background: #fede00;
         display: flex;
     }
+    
+    
 
     div.zero {
         width: 400px;
@@ -73,14 +75,14 @@ body{
     border:0px;
     border-radius:5px;
     margin-top: 15px;
-    color:#b7001f;
+    color: black;
     margin-left: 10px;
     }
     
     input.two{
     width:70px;
     height:35px;
-    background:#b7001f;
+    background:#f02749;
     font-family: "Times new roman", Times;
     font-size:22px;
     border:0px;
@@ -130,7 +132,7 @@ body{
 
     input.one {
         margin-left: 3px;
-        border: 2px solid #b7001c;
+        border: 2px solid #9c530e;
         background-color: #ffff90;
         font-size: 20px;
         border-radius: 8px;
