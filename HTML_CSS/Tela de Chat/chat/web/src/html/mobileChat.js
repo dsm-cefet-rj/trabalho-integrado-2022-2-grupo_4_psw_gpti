@@ -1,12 +1,24 @@
 
+const nav = document.getElementById("nav");
+const menuMobile = document.getElementById("menuMobile");
+var menu = document.getElementById("menu");
+var ok = document.getElementById("ok");
+var text = document.getElementById("text");
 
-const menuMobile = document.getElementById('menuMobile');
 
 function toggleMenu (event){
-    if (event.type === 'touchstart') event.preventDefault();
-   const nav = document.getElementById('nav');
-   nav.classList.toggle('active');
-
+    if (event.type === "touchstart") event.preventDefault();
+const nav = document.getElementById("nav");
+   nav.classList.toggle("active");
 }
-menuMobile.addEventListener('click', toggleMenu);
-menuMobile.addEventListener('touchstart', toggleMenu);
+if(ok){
+    var newText = document.createElement("li");
+    newText.innerHTML = text.value;
+    text.appendChild(newText);
+    text.value="";
+}
+    
+
+menuMobile.addEventListener("click", toggleMenu);
+menuMobile.addEventListener('touchstart', toggleMenu); 
+ok.addEventListener("click");

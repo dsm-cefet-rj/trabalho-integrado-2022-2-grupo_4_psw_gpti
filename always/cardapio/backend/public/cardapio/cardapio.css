@@ -1,0 +1,161 @@
+body{
+    background-color: #B7001F;
+    font-family:'Corbert';
+    }
+
+    /* NAV */
+    
+        .menuNav {
+        margin: 0px;
+        padding: 0px;
+        }
+    
+        a {
+            color:#fede00;
+            text-decoration: none;
+            font-family:'Corbert';
+            
+        }
+        
+   
+        #headerNav {
+            display: flex;
+            align-items: center;
+            height: 70px;
+            box-sizing: border-box;
+            padding: 1rem;
+            justify-content: space-between;
+        }
+    
+        #logoAlways {
+            height: 100px;
+        }
+    
+        #menuNav {
+            display: flex;
+            list-style: none;
+            gap: .5rem;
+        }
+        
+        #menuMobile {
+            display: none;
+        }
+        /* cardapio */
+
+    @font-face {
+        font-family: 'Corbert';
+        src: url('Corbert-Regular.ttf');
+    }
+    
+    input.one{
+    margin-left: 85px;
+    }
+    
+    label.one{
+    margin-right: 15px;
+    }
+    
+    label{
+    font-family: 'Corbert';
+    color: white;
+    font-size: 22px;
+    text-shadow: 2px 2px black;
+    }
+    
+    input.one{
+    background: #FEDE00;
+    font-size: 27px;
+    font-family: 'Corbert';
+    color: #B7001F;
+    border: 0px;
+    border-radius: 5px;
+    }
+    
+    h3.one{
+    font-family: 'Corbert';
+    color: white;
+    font-size: 27px;
+    }
+    
+    div.one{
+    position: relative;
+    width: fit-content;
+    width: -moz-fit-content;
+    }
+    div.two{
+    position: relative;
+    width: fit-content;
+    width: -moz-fit-content;
+    }
+    
+    div.three {
+    width: fit-content; 
+    padding: 8px;
+    }
+    
+    div.four {
+    width: fit-content; 
+    }
+
+    
+    @media screen and (max-width: 768px) {
+    
+        div.zero {
+            width: 270px;
+            text-align: center;
+            margin: 0 auto;
+        }
+    
+        div.one {
+            width: 275px;
+            height: 475px;
+        }
+    
+        div.two {
+            width: 270px;
+            height: 330px;
+            margin-left: 0px;
+        }
+    
+        div.three {
+            width: 270px;
+            height: 25px;
+            border-radius: 8px;
+            margin-top: 288px;
+            background: none;
+            border: none;
+        }
+    
+        h2.one {
+            position: relative;
+            margin-left: 100px;
+            margin-top: -60px;
+            font-size: 21px;
+            text-align: center;   
+        }
+    
+        input.one {
+            margin-left: 3px;
+            border: 2px solid #b7001c;
+            background-color: #ffff90;
+            font-size: 20px;
+            border-radius: 8px;
+            width: 250px;
+        }
+    
+        input.two {
+            width: 42px;
+            height: 25px;
+            font-size: 15px;
+            position: relative;
+            border: 0px;
+            margin-top: 10px;
+            margin-right: -70px;
+            color: #ffff90;;
+        }
+    
+    
+    }
+    
+    
+    
