@@ -15,7 +15,14 @@ function App() {
       <Nav/>
       <Chat/>
     </div>
-  );
+  ); 
 }
 
 export default App;
+
+
+//const chatButon=document.querySelector("chat_button");
+//const chatContent= document.querySelector(".chat_one");
+//const chat=newText("chatButton,chatContent");
+//chat.display();
+//chat.toggle(false,chatButton);

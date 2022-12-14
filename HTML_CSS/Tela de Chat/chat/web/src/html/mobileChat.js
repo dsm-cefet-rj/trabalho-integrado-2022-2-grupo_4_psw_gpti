@@ -17,8 +17,13 @@ if(ok){
     text.appendChild(newText);
     text.value="";
 }
+
+else{
+    let newText= "";
+    ok.addEventListener("click");
+}
     
 
 menuMobile.addEventListener("click", toggleMenu);
 menuMobile.addEventListener('touchstart', toggleMenu); 
-ok.addEventListener("click");
+
