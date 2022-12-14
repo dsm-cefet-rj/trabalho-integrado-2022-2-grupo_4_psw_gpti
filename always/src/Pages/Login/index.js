@@ -1,32 +1,31 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Button} from 'reactstrap';
 import {AreaLogin} from './Styled';
-import {BrowserRouter, Link} from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import Helmet from 'react-helmet';
-import  * as yup from 'yup';
-import {yupResolver} from '@hookform/resolvers/yup';
-import {useForm} from 'react-hook-form';
 
-const validPost = yup.object().shape(
-    {
-        nome: yup.string().required().max(30),
-        cpf: yup.number().required(11),
-        telefone: yup.number().required().max(11),
-        endereco: yup.string().required().max(40),
-        senha: yup.string().required().max(10),
-        email: yup.string().required().max(50),
-
-
-    }
-)
 
 function Page(){
 
-	const addPost = data => console.log(data)
+	const [state, setState] = useState({
+		nome: '',
+		senha: ''
+	});
+
+
+
 	
-	const {register, handleSubmit, formState: {}} = useForm({
-		resolver: yupResolver(validPost)
-	})
+	function handleSubmit(e){
+		e.preventDefault();
+		console.log(state);
+		
+	}
+
+	function handleChange(e){
+		setState({...state, [e.target.name]: e.target.value})
+	}
+
+
 
 
     return( 
@@ -38,23 +37,18 @@ function Page(){
 				<div className="row">
 					<div className="col nine">
 						<div>
-							<form className="two" onSubmit={handleSubmit(addPost)} >
+							<form className="two" noValidate={true} onSubmit={handleSubmit} autoComplete="off">
 								<label className=" onelog">
 								Usu&aacute;rio:
-								<input className = "two" name='nome' {...register('nome')}  />
+								<input className = "two" name='nome' value={state.nome} onChange={handleChange}/>
 								</label>
-								<label className=" onelog" >
+								<label className=" onelog">
 								Senha:
-								<input className = "two" name='senha' {...register('senha')}  /> 
+								<input className = "two" name='senha' value={state.senha} onChange={handleChange}/> 
 								</label>
-								<button type='submit'>Enviar</button>
+								<button className='two'>Enviar</button>
 							
-							</form>
-
-										
-												
-										
-																
+							</form>									
 						</div>
 					</div>
 				</div>
