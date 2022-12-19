@@ -16,12 +16,20 @@ const Nav = function() {
  }
 
  export {Nav};
+/*
+ app.post('/add', function(req,res){
+res.send('Formulario recebido!')
+ })
 
+ const bodyParser = require('body-parser')
+ app.use(bodyParser.urlencoded({extended: false}))
+ app.use(bodyParser.json())
+*/
 const Cardapio = () => {
         return <div align="center" position="relative" display= "flex">
            <div class= "four" >
               <div class="three">
-                 <form align="left">
+                 <form align="left" /*action='/add' method='post'*/>
                     <div class="tamHamburg">
                        <h3 class="one"> Qual o tamanho do seu sanduíche? </h3>
                        <div align="center" display="flex">
